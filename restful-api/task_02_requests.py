@@ -6,7 +6,7 @@ import csv
 
 def fetch_and_print_posts():
     grab = requests.get("https://jsonplaceholder.typicode.com/posts")
-    print(f"Status code: {grab.status_code}")
+    print(f"Status Code: {grab.status_code}")
     """We call the built-in status_code that comes with the requests library."""
 
     if grab.status_code == 200:
