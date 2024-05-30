@@ -18,13 +18,13 @@ def convert_csv_to_json(csv_filename):
     False.
     """
     try:
-        # Open the csv file and read the data
+        """Open the csv file and read the data"""
         with open(csv_filename, more="r") as csv_file:
             csv_reader = csv.DictReader(csv_file)
-            # Convert rows into a list of dictionaries
+            """Convert rows into a list of dictionaries"""
             data = [row for row in csv_reader]
 
-        # Serialize the list of dictionaries to json format
+        """Serialize the list of dictionaries to json format"""
         with open("data.json", mode="w") as json_file:
             json.dump(data, json_file, indent=4)
 
