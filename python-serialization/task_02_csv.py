@@ -18,22 +18,22 @@ def convert_csv_to_json(csv_filename):
     False.
     """
     try:
-        """Open the csv file and read the data"""
-        with open(csv_filename, more="r") as csv_file:
+        """Open the CSV file and read the data."""
+        with open(csv_filename, mode="r") as csv_file:
             csv_reader = csv.DictReader(csv_file)
-            """Convert rows into a list of dictionaries"""
+            """Convert rows into a list of dictionaries."""
             data = [row for row in csv_reader]
 
-        """Serialize the list of dictionaries to json format"""
+        """Serialize the list of dictionaries to JSON format."""
         with open("data.json", mode="w") as json_file:
             json.dump(data, json_file, indent=4)
 
         return True
 
-    except FileNotFound:
+    except FileNotFoundError:
         print(f"File {csv_filename} not found.")
         return False
 
-    except Exception as error:
-        print(f"An error has occurred: {error}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
         return False
