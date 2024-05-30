@@ -12,7 +12,7 @@ def fetch_and_print_posts():
     if grab.status_code == 200:
         posts = grab.json()
         for data in posts:
-            print(data["title"])
+            print(data['title'])
     else:
         print("Error fetching posts.")
 
@@ -29,7 +29,7 @@ def fetch_and_save_posts():
 
         csv_list = ["id", "title", "body"]
 
-        with open("posts.csv", "w", newline="") as csvfile:
+        with open("posts.csv", "w", newline='') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=csv_list)
             writer.writeheader()
             for post in structured_data:
