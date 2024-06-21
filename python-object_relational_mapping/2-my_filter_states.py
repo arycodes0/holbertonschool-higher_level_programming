@@ -47,7 +47,7 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
     query = """SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY
     id ASC""".format(state_name)
-    cur.execute(query)
+    cur.execute(query, (state_name,))
     """
     Above we execute an SQL query.
     """
