@@ -5,7 +5,7 @@ It takes 3 command line args: MySQL username, password, and
 database name.
 """
 
-import MySQL
+import MySQLdb
 import sys
 """
 Above we import MySQLdb to be able to interact with MySQL.
