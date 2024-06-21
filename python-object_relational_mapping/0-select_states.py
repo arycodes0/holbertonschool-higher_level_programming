@@ -5,13 +5,14 @@ It takes 3 command line args: MySQL username, password, and
 database name.
 """
 
+import MySQL
+import sys
 """
-Below we import MySQLdb to be able to interact with MySQL.
+Above we import MySQLdb to be able to interact with MySQL.
 We also import sys to handle command-line args for the username,
 password, and database name.
 """
-import MySQLdb
-import sys
+
 
 """
 On the 'if' condition below, we ensure the script runs only when
