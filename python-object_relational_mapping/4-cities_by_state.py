@@ -18,6 +18,8 @@ Below we declare a function to create the cities query. We use a function
 in order to improve readability, reusability, and maintainability
 of the code.
 """
+
+
 def get_cities_query():
     """
     Creates the SQL query to fetch cities and their corresponding states.
@@ -31,6 +33,7 @@ def get_cities_query():
     INNER JOIN states ON cities.state_id = states.id
     ORDER BY cities.id
     """
+
 
 """
 On the 'if' condition below, we ensure the script runs only when
@@ -74,4 +77,3 @@ if __name__ == "__main__":
     """
     cur.close()
     db.close()
-
