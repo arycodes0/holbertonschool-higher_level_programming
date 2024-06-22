@@ -39,4 +39,3 @@ if __name__ == "__main__":
     Here we print new state id.
     """
     print(new_state.id)
-
